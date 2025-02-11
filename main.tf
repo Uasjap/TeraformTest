@@ -1,3 +1,11 @@
+terraform {
+  backend "s3" {
+    bucket = "vasilijs-volkovs-test-tera-bucket"
+    key    = "terraform.tfstate"
+    region = "eu-west-1"
+  }
+}
+
 # Define the provider and region
 provider "aws" {
   region = "eu-west-1"
@@ -25,3 +33,4 @@ resource "aws_instance" "my_instance" {
     Name = "Team1Test-I-hope-it-will-work"
   }
 }
+
