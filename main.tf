@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "vasilijs-volkovs-test-tera-bucket"
+    bucket = "codepipeline-eu-west-1-vasilijs-volkovs"
     key    = "terraform.tfstate"
     region = "eu-west-1"
   }
@@ -30,7 +30,7 @@ resource "aws_instance" "my_instance" {
   }
 
   tags = {
-    Name = "Team1Test-I-hope-it-will-work"
+    Name = "Team1TerraformDone"
   }
 }
 
